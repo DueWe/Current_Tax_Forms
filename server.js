@@ -48,6 +48,7 @@ app.get("/pdf-meta", async (req, res) => {
 <!DOCTYPE html>
 <html>
 <head>
+<meta http-equiv="refresh" content="600">
 <style>
 body {
   background-color: #eef2f7;
