@@ -1,3 +1,17 @@
+function getTimestamp() {
+  const now = new Date();
+
+  const date = now.toISOString().split("T")[0];
+
+  let hours = now.getHours();
+  const minutes = now.getMinutes().toString().padStart(2, "0");
+
+  const ampm = hours >= 12 ? "PM" : "AM";
+  hours = hours % 12;
+  hours = hours ? hours : 12; // convert 0 → 12
+
+  return `${date} ${hours}:${minutes} ${ampm}`;
+}
 const express = require("express");
 const { PDFDocument } = require("pdf-lib");
 
@@ -95,7 +109,13 @@ h2 {
 </head>
 <body>
 
-<h2>Current Tax Forms from IRS</h2>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <h2>Current Tax Forms from IRS</h2>
+  <div style="font-size:14px; color:#5e6c84;">
+    Last refreshed: ${getTimestamp()}
+  </div>
+</div>
+
 `;
 
   for (const url of urls) {
