@@ -37,6 +37,7 @@ app.get("/pdf-meta", async (req, res) => {
     "https://www.irs.gov/pub/irs-pdf/f1095c.pdf",
     "https://www.irs.gov/pub/irs-pdf/f1098.pdf",
     "https://www.irs.gov/pub/irs-pdf/f1098e.pdf",
+    "https://www.irs.gov/pub/irs-pdf/f1098vli.pdf",
     "https://www.irs.gov/pub/irs-pdf/f1099a.pdf",
     "https://www.irs.gov/pub/irs-pdf/f1099c.pdf",
     "https://www.irs.gov/pub/irs-pdf/f1099div.pdf",
